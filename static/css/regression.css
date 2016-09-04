@@ -1,0 +1,112 @@
+		.classy {
+			color: gray;
+			font-size: 14px;
+		}
+
+		.btn {
+			border: 1px solid
+		}
+
+		fieldset {
+			border: 0;
+		}
+
+		.fieldset label {
+			display: block;
+			margin: 30px 0 0 0;
+		}
+
+		.overflow {
+			height: 200px;
+		}
+
+		.radio {
+			padding-left: 5px;
+		}
+		.radio label {
+			margin: 0 0 0 0;
+		}
+		input[type="radio"] {
+			margin-right: 5px;
+		}
+		.title_box {
+			display: block;
+			border: 1px solid;
+			border-radius: 10px;
+			border-color: rgb(64, 128, 179);
+			background-color: seaShell;
+			left: 6px;
+			position: relative;
+			margin-top: 5px;
+			padding: 0
+		}
+
+		.title_box #h4title {
+			position: relative;
+			padding: 5px 5px 5px 5px;
+			top: -14px;
+			margin-left: 1em;
+			display: inline;
+			background-color: inherit;
+			font-family: Calibri;
+			color: rgb(64, 128, 179);
+			font-style: italic;
+			font-size: 18px;
+		}
+
+/*!
+ * Start Bootstrap - Simple Sidebar (http://startbootstrap.com/)
+ * Copyright 2013-2016 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
+ */
+
+/*
+body {
+    overflow-x: hidden;
+ }
+*/
+
+#wrapper {
+    padding-left: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#sidebar-wrapper {
+    z-index: 1000;
+    position: fixed;
+    left: 290px;
+    width: 0;
+    height: 100%;
+    margin-left: -290px;
+    overflow-y: auto;
+    background: seaShell;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#page-content-wrapper {
+    width: 100%;
+    position: absolute;
+    padding: 15px;
+}
+
+
+@media(min-width:768px) {
+    #wrapper {
+        padding-left: 290px;
+    }
+
+    #sidebar-wrapper {
+        width: 290px;
+    }
+
+    #page-content-wrapper {
+        padding: 20px;
+        position: relative;
+    }
+}

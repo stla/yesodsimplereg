@@ -1,0 +1,85 @@
+!!!
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+    <title>Regression
+  <body>
+    <div #wrapper>
+      $#  Sidebar 
+      <div #sidebar-wrapper>
+        <div .container>
+          <div .row>
+            <div .col-sm-12>
+              <form #csvform method="post" enctype="multipart/form-data">
+                <label for="csvfile" .control-label style="font-weight: bold">
+                  Select a CSV file
+                <input #csvfile type="file" data-filename-placement="inside" .btn .btn-primary>
+        <br>
+        <div .container>
+          <div .row>
+            <div .col-sm-12>
+              <fieldset #selectcolumns style="display:none;">
+                <label for="selcolumn1" style="color:blue">
+                  Select the 
+                  <em>
+                    x
+                  column
+                <select .form-control #selcolumn1 style="overflow-y:auto">
+                <br>
+                <label for="selcolumn2" style="color:green">
+                  Select the 
+                  <em>
+                    y
+                  column
+                <select .form-control #selcolumn2 style="overflow-y:auto">
+        <br>
+        <div #divreport .report style="display:none;">
+          <h3>
+            <em>
+              <u>
+                Report:
+          <div .container>
+            <div .row>
+              <div .col-sm-7>
+                <p>
+                  <em>
+                    Confidence level:
+              <div .col-sm-5>
+                <input #conflevel type="number" .form-control .bfh-number min="1" max="99" value="95" buttons="true">
+          <div .container>
+            <div .row>
+              <div .col-sm-12>
+                <form .title_box>
+                  <div #h4title>
+                    File type:
+                  <div .radio>
+                    <label>
+                      <input type="radio" name="optradio" checked="checked" value="word_document" data-value="docx">
+                      docx
+                  <div .radio>
+                    <label>
+                      <input type="radio" name="optradio" value="pdf_document" data-value="pdf">
+                      pdf
+                  <div .radio>
+                    <label>
+                      <input type="radio" name="optradio" value="html_document" data-value="html">
+                      html
+          <br>
+          <div .container>
+            <div .row>
+              <div .col-sm-12>
+                <button #reportbutton type="button" .btn-danger disabled="">
+                  Generate report
+                <a #download>
+      $#  /#sidebar-wrapper 
+      $#  Page Content 
+      <div #page-content-wrapper>
+        <div .container-fluid>
+          <div .row>
+            <div .col-sm-6>
+              <div .jqplot-container style="display:block;margin-left:auto;margin-right:auto">
+                <div #xyjqplot .plot-placeholder>
+            <div .col-sm-6 style="max-height:500px;overflow:auto">
+              <table #dataTable .table .table-bordered>
+      $#  /#page-content-wrapper 
+    $#  /#wrapper 

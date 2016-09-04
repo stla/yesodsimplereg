@@ -1,0 +1,32 @@
+```{r packages, include=FALSE}
+library(ggplot2)
+```
+
+
+
+```{r fit}
+dd <- setNames(dat, c("x","y"))
+fit <- lm(y~x, data=dd)
+```
+
+#### Summary
+
+```{r summary}
+summary(fit)
+```
+
+#### Confidence intervals
+
+```{r intervals, results='asis'}
+out <- confint(fit, level=conflevel)
+rownames(out) <- c("Intercept", "slope")
+pander::pandoc.table(out)
+```
+
+
+```{r figure}
+ggplot(dd, aes(x=x, y=y)) + geom_point() + geom_smooth(method="lm") +
+  xlab(colnames(dat)[1]) + ylab(colnames(dat)[2]) +
+  ggtitle(sprintf("Plot of %s vs %s.", colnames(dat)[2], colnames(dat)[1]))
+```
+
